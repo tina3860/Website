@@ -1,5 +1,280 @@
 body {
-    margin:0;
-    text-align:center;
-    background: black;
+  margin: 0;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw; /* Full viewport width */
+  max-width: 100%;
+  height: auto; /* Let padding control the height */
+  background-color: #000;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px 32px; /* Increased vertical padding */
+  box-sizing: border-box;
+}
+
+.nav_logo img {
+  width: 52px;
+  height: 53px;
+  flex-shrink: 0;
+}
+
+.nav_pill {
+  display: flex;
+  padding: 0 25px;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+.nav_pill li a {
+  color: #fff; /* Black text for contrast */
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  /* Single Line/Body Base */
+  font-family: var(
+    --sds-typography-body-font-family,
+    "Segoe UI",
+    Arial,
+    sans-serif
+  );
+  font-size: var(--sds-typography-body-size-medium);
+  font-style: normal;
+  font-weight: var(--sds-typography-body-font-weight-regular);
+  line-height: 100%; /* 16px */
+}
+
+.about {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 200px; /* Increased gap to separate columns */
+  margin-top: 32px;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 331px;
+  margin-right: 0; /* Remove the large margin */
+}
+
+.about-left img {
+  width: 400px;      /* Increase image size */
+  height: 395px;     /* Keep aspect ratio or adjust as needed */
+  margin-top: 32px;
+  display: block;
+}
+
+.name {
+  margin-top: 50px;  /* Increase space below image */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+
+.bio {
+  margin-top: 45px;  /* Increase space below name */
+  font-size: 1.1rem;
+  color: #ccc;
+  text-align: left;
+  width: 100%;
+}
+
+.name,
+.bio {
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
+}
+
+.name {
+  margin-top: 50px;
+  font-family: var(
+    --sds-typography-body-font-family,
+    "Segoe UI",
+    Arial,
+    sans-serif
+  );
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.bio {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #fff;
+  max-width: none;
+  font-family: var(
+    --sds-typography-body-font-family,
+    "Segoe UI",
+    Arial,
+    sans-serif
+  );
+  white-space: nowrap;
+}
+
+/* Speech bubble tail */
+.about-right::before {
+  content: "";
+  position: absolute;
+  left: -70px;           /* Move tail further left to match new size */
+  top: 80px;             /* Adjust vertical position as needed */
+  width: 100px;           /* Make tail bigger */
+  height: 100px;          /* Make tail bigger */
+  background: #f3f3f3;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  transform: rotate(-25deg); /* Angle the tail */
+  z-index: 1;
+  font-weight: 600;
+}
+
+.about-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 900px;              /* Elongate the bubble */
+  max-width: 100%;
+  height: 400px;
+  padding: 32px 32px 32px 100px; /* Extra left padding for the tail */
+  background: #f3f3f3;
+  border-radius: 24px;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+
+
+.about,
+.about-left,
+.about-right,
+.name,
+.bio {
+  line-height: 1.7;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  background-image: url('assets/Hero - 18-05-2025 22-20-59.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 78vh; /* Reduced from 100vh */
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  font-family: var(
+    --sds-typography-body-font-family,
+    "Segoe UI",
+    Arial,
+    sans-serif
+  );
+
+  footer {
+    margin-top: auto;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Inter', Arial, sans-serif;
+    padding: 16px 0;
   }
+
+
+
+.footer_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer_left img {
+  width: 52px;
+  height: 53px;
+}
+
+.social_media {
+  display: flex;
+  gap: 12px;
+}
+.social_media i {
+  color: #000;
+}
+
+.footer_pill {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.footer_pill li a {
+  color: #000;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.footer_left_row {
+  display: flex;
+  align-items: flex;
+  gap: 12px;
+}
+
+.footer_left_row img {
+  width: 52px;
+  height: 53px;
+}
+
+.footer_name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #000;
+  margin: 0;
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
