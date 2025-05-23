@@ -1,5 +1,7 @@
 html,
 body {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   min-height: 100vh;
   margin: 0;
@@ -195,12 +197,13 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 78vh; /* Reduced from 100vh */
+  min-height: 78vh;
   width: 100%;
 }
 
 footer {
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
   align-items: flex-start;
   padding: 16px 32px;
@@ -305,14 +308,14 @@ footer {
 /*--------------------------------------------------------------Projects--------------------------------------------------------------------- */
 main.projects-main {
   position: relative;
-  min-height: 60vh;
+  min-height: 100vh;
   width: 100%;
   background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  flex: 1;
+  padding-bottom: 500px;
 }
 
 main.projects-main::before {
@@ -453,15 +456,16 @@ main.projects-main::before {
   color: orange;
   font-size: 2.5rem;
   min-width: 60px;
-  text-align: left;
+  text-align: right;
   margin: 0;
+  padding-left: 15px;
 }
 
 .section_content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: right;
 }
 
 .section_descriptions {
@@ -469,6 +473,8 @@ main.projects-main::before {
   text-align: left;
   margin-top: 8px;
   font-size: 1.1rem;
+  max-width: 75%;
+  padding-right: 30px;
 }
 .section-title {
   font-weight: bold;
@@ -479,11 +485,50 @@ main.projects-main::before {
 }
 
 .projects_content {
+  z-index: 3;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 32px;
   margin-top: 32px;
-  flex: 4;
+  flex: 3;
+}
+
+.project-section img {
+  max-width: 400px; /* Set your desired max width */
+  width: 100%; /* Make it responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 16px 0; /* Optional: add vertical spacing */
+  border-radius: 8px; /* Optional: rounded corners */
+  display: block;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 16px; /* Adjust as needed */
+  color: #000;
+  text-decoration: none;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  display: none; /* Hidden by default */
+}
+#scrollToTopBtn:hover {
+  opacity: 1;
 }
