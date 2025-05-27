@@ -190,6 +190,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
 }
 
 main {
@@ -199,6 +200,13 @@ main {
   background-repeat: no-repeat;
   min-height: 78vh;
   width: 100%;
+}
+main,
+main.projects-main,
+main.projects-page-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -305,7 +313,7 @@ footer {
 .contact_info p:first-child {
   margin-bottom: 12px; /* Adjust the value as needed */
 }
-/*--------------------------------------------------------------Projects--------------------------------------------------------------------- */
+/*----------------------------------------------------------Projects--------------------------------------------------------------------- */
 main.projects-main {
   position: relative;
   min-height: 100vh;
@@ -315,7 +323,6 @@ main.projects-main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  padding-bottom: 500px;
 }
 
 main.projects-main::before {
@@ -483,7 +490,12 @@ main.projects-main::before {
   margin: 0;
   text-align: left;
 }
-
+.projects img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 16px;
+}
 .projects_content {
   z-index: 3;
   background-color: white;
@@ -531,4 +543,155 @@ main.projects-main::before {
 }
 #scrollToTopBtn:hover {
   opacity: 1;
+}
+
+/*----------------------------------------------------------Projects_page--------------------------------------------------------------------- */
+main.projects-page-main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  color: black;
+}
+
+main.projects-page-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* Height of your header image */
+}
+.projects-page-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* or your desired header height */
+  margin-bottom: 32px; /* Add space below header */
+}
+
+.projects-page-content {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  padding: 0px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+.pdf-reader-container {
+  margin: 32px 0;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.see-full-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 34px;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.page-content-description h2,
+.page-content-description h3,
+.page-content-description h4,
+.page-content-description h5,
+.page-content-description h6 {
+  color: #000;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.12px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.page-content-description h2:first-child,
+.page-content-description h3:first-child,
+.page-content-description h4:first-child,
+.page-content-description h5:first-child,
+.page-content-description h6:first-child {
+  margin-top: 0;
+}
+
+.page-content-description p,
+.page-content-description ul,
+.page-content-description ol {
+  color: rgba(0, 0, 0, 0.45);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%; /* 26.1px */
+  letter-spacing: -0.09px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.page-content-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.desc-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.desc-header {
+  flex: 0 0 220px; /* Fixed width for headers */
+  text-align: left;
+}
+
+.desc-header h2,
+.desc-header h3,
+.desc-header h4,
+.desc-header h5,
+.desc-header h6 {
+  color: #000;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.12px;
+  margin: 0;
+}
+
+.desc-text {
+  flex: 1 1 0;
+}
+
+.desc-text p,
+.desc-text ul,
+.desc-text ol {
+  color: rgba(0, 0, 0, 0.45);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%;
+  letter-spacing: -0.09px;
+  margin: 0;
 }
