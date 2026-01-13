@@ -1,3 +1,39 @@
+:root {
+  /* Typography */
+  --font-xs: 0.75rem;   /* 12px */
+  --font-sm: 0.875rem;  /* 14px */
+  --font-md: 1rem;      /* 16px */
+  --font-lg: 1.125rem;  /* 18px */
+  --font-xl: 1.25rem;   /* 20px */
+  --font-2xl: 1.5rem;   /* 24px */
+  --font-3xl: 2rem;     /* 32px */
+  --font-4xl: 2.5rem;   /* 40px */
+  --font-hero: 6.25rem; /* 100px */
+
+  /* Spacing (8px-based scale) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+
+  /* Radius */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem;  /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1.5rem;  /* 24px */
+
+  /* Layout */
+  --container-max: 78.125rem; /* 1250px */
+  --about-left: 20.6875rem;   /* 331px */
+  --about-right: 56.25rem;    /* 900px */
+}
+
+
 html,
 body {
   display: flex;
@@ -57,7 +93,7 @@ body {
     Arial,
     sans-serif
   );
-  font-size: var(--sds-typography-body-size-medium);
+  font-size: var(--font-md);
   font-style: normal;
   font-weight: var(--sds-typography-body-font-weight-regular);
   line-height: 100%; /* 16px */
@@ -93,7 +129,7 @@ body {
 
 .name {
   margin-top: 50px; /* Increase space below image */
-  font-size: 1.5rem;
+  font-size: var(--font-2xl);
   font-weight: bold;
   text-align: left;
   width: 100%;
@@ -101,7 +137,7 @@ body {
 
 .bio {
   margin-top: 45px; /* Increase space below name */
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   color: #ccc;
   text-align: left;
   width: 100%;
@@ -122,13 +158,13 @@ body {
     Arial,
     sans-serif
   );
-  font-size: 1.25rem;
+  font-size: var(--font-xl);
   font-weight: bold;
 }
 
 .bio {
   margin-top: 30px;
-  font-size: 1rem;
+  font-size: var(--font-md);
   color: #fff;
   max-width: none;
   font-family: var(
@@ -234,7 +270,7 @@ footer {
 
 .footer_name {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   color: #000;
   margin: 0;
 }
@@ -355,7 +391,7 @@ main.projects-main::before {
 .typing-animation {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 600;
-  font-size: 100px;
+  font-size: var(--font-hero);
   text-align: center;
   margin: 0 auto;
   width: 9ch; /* Number of characters in "Projects" */
@@ -389,7 +425,7 @@ main.projects-main::before {
 }
 
 .Description {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
   color: #8a8a8a;
   margin-top: 16px;
 }
@@ -462,7 +498,7 @@ main.projects-main::before {
 .number {
   font-weight: bold;
   color: orange;
-  font-size: 2.5rem;
+  font-size: var(--font-4xl);
   min-width: 60px;
   text-align: right;
   margin: 0;
@@ -480,14 +516,14 @@ main.projects-main::before {
   color: #8a8a8a;
   text-align: left;
   margin-top: 8px;
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   max-width: 75%;
   padding-right: 30px;
 }
 .section-title {
   font-weight: bold;
   color: #000;
-  font-size: 1.5rem;
+  font-size: var(--font-2xl);
   margin: 0;
   text-align: left;
 }
@@ -536,7 +572,7 @@ main.projects-main::before {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: var(--font-3xl);
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s;
@@ -605,7 +641,7 @@ main.projects-page-main::before {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: var(--font-md);
   text-align: center;
   transition: background 0.2s;
 }
@@ -617,7 +653,7 @@ main.projects-page-main::before {
 .page-content-description h6 {
   color: #000;
   font-family: Inter, Arial, sans-serif;
-  font-size: 24px;
+  font-size: var(--font-2xl);
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 28.8px */
@@ -639,7 +675,7 @@ main.projects-page-main::before {
 .page-content-description ol {
   color: rgba(0, 0, 0, 0.45);
   font-family: Inter, Arial, sans-serif;
-  font-size: 18px;
+  font-size: var(--font-lg);
   font-style: normal;
   font-weight: 500;
   line-height: 145%; /* 26.1px */
@@ -672,7 +708,7 @@ main.projects-page-main::before {
 .desc-header h6 {
   color: #000;
   font-family: Inter, Arial, sans-serif;
-  font-size: 24px;
+  font-size: var(--font-2xl);
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
@@ -689,7 +725,7 @@ main.projects-page-main::before {
 .desc-text ol {
   color: rgba(0, 0, 0, 0.45);
   font-family: Inter, Arial, sans-serif;
-  font-size: 18px;
+  font-size: var(--font-lg);
   font-style: normal;
   font-weight: 500;
   line-height: 145%;
@@ -724,7 +760,7 @@ main.projects-page-main::before {
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: var(--font-md);
   box-sizing: border-box;
   transition: border-color 0.3s;
 }
@@ -741,7 +777,7 @@ main.projects-page-main::before {
   padding: 12px 30px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: var(--font-md);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -768,7 +804,7 @@ main.projects-page-main::before {
 }
 
 .thank-you-message p {
-  font-size: 18px;
+  font-size: var(--font-lg);
   color: #555;
 }
 
